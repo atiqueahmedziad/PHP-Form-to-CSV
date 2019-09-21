@@ -7,7 +7,6 @@
 
   $formValid = false;
 
-
   if(isset($_POST['submit'])) {
 
     if(empty(trim($_POST['first_name']))) {
@@ -40,7 +39,6 @@
       $message = $_POST['message'];
     }
 
-
     if(!empty(trim($firstName)) && !empty(trim($lastName)) && !empty(trim($email)) && !empty(trim($phone)) && !empty(trim($message))) {
       $formValid = true;
     }
@@ -48,11 +46,11 @@
     if($formValid){
       $new_csv = fopen($filename, 'a');
       $resOrder = array(
-      0 => htmlspecialchars($firstName),
-      1 => htmlspecialchars($lastName),
-      2 => htmlspecialchars($email),
-      3 => htmlspecialchars($phone),
-      4 => htmlspecialchars($message)
+        0 => htmlspecialchars($firstName),
+        1 => htmlspecialchars($lastName),
+        2 => htmlspecialchars($email),
+        3 => htmlspecialchars($phone),
+        4 => htmlspecialchars($message)
       );
       fputcsv($new_csv, $resOrder);
 
@@ -61,7 +59,6 @@
       $firstName = $lastName = $email = $phone = $message = '';
     }
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -113,6 +110,7 @@
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="input-field col s12">
               <input id="email" type="email" name="email" class="validate" value="<?php echo htmlspecialchars($email) ?>">
@@ -148,6 +146,7 @@
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="col s12 center">
               <button class="btn waves-effect cyan waves-light z-depth-2" type="submit" value="Submit" name="submit">Submit
