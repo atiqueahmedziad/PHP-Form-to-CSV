@@ -36,22 +36,22 @@
 </head>
 <body>
 
-	<div class="container">
-      	<div class="row">
-			<h3 class="col s12 center">Contact Information</h3>
-			<div class="col s12 card-panel">
+<div class="container">
+    <div class="row">
+		<h3 class="col s12 center">Contact Information</h3>
+		<div class="col s12 card-panel">
 		  	<table class="responsive-table highlight">
-          		<thead>
-	          		<tr>
-              			<th>First Name</th>
-	            		<th>Last Name</th>
-	            		<th>Email</th>
+		  		<thead>
+		      		<tr>
+		      			<th>First Name</th>
+		        		<th>Last Name</th>
+		        		<th>Email</th>
 						<th>Phone</th>
 						<th>Message</th>
-	           		</tr>
-	          	</thead>
+		       		</tr>
+		      	</thead>
 
-	         	<tbody>
+		     	<tbody>
 					<?php
 						foreach ($contactArray as $eachContactInfo) {
 							echo '<tr>';
@@ -62,10 +62,10 @@
 						}
 					?>
 		        </tbody>
-	        </table>
-	  		</div>
-	  	</div>
-	</div>
+		    </table>
+  		</div>
+  	</div>
+</div>
 
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="js/main.js"></script>
