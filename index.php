@@ -84,66 +84,66 @@
 <body>
 
 	<div class="container">
-	  <div class="row">
+	    <div class="row">
 			<h2 class="col s12 m6 offset-m3 l6 offset-l3 center">Contact Form</h2>
 			<div class="col s6 m6 offset-m3 l6 offset-l3 z-depth-6 card-panel">
 				<div class="contact-form">
 					<form action="index.php" method="POST">
-			      <div class="row">
-			        <div class="input-field col s6">
-			          <input id="first_name" name="first_name" type="text" class="validate" value="<?php echo htmlspecialchars($firstName) ?>">
-			          <label for="first_name">First Name</label>
+				        <div class="row">
+					        <div class="input-field col s6">
+					            <input id="first_name" name="first_name" type="text" class="validate" value="<?php echo htmlspecialchars($firstName) ?>">
+					            <label for="first_name">First Name</label>
 								<div class="validation-error">
 									<?php
 										echo $errors['firstName'];
 									?>
 								</div>
-			        </div>
-			        <div class="input-field col s6">
-			          <input id="last_name" name="last_name" type="text" class="validate" value="<?php echo htmlspecialchars($lastName) ?>">
-			          <label for="last_name">Last Name</label>
+					        </div>
+					        <div class="input-field col s6">
+					            <input id="last_name" name="last_name" type="text" class="validate" value="<?php echo htmlspecialchars($lastName) ?>">
+					            <label for="last_name">Last Name</label>
 								<div class="validation-error">
 									<?php
 										echo $errors['lastName'];
 									?>
 								</div>
-			        </div>
-			      </div>
-			      <div class="row">
-			        <div class="input-field col s12">
-			          <input id="email" type="email" name="email" class="validate" value="<?php echo htmlspecialchars($email) ?>">
-			          <label for="email">Email</label>
+					        </div>
+				        </div>
+				        <div class="row">
+					        <div class="input-field col s12">
+					            <input id="email" type="email" name="email" class="validate" value="<?php echo htmlspecialchars($email) ?>">
+					            <label for="email">Email</label>
 								<div class="validation-error">
 									<?php
 										echo $errors['emailErr'];
 									?>
 								</div>
-			        </div>
-		      	</div>
+					        </div>
+			      	    </div>
 
 						<div class="row">
-			        <div class="input-field col s12">
-			          <input id="contact" type="text" name="phone" class="validate" value="<?php echo htmlspecialchars($phone) ?>">
-			          <label for="contact">Contact number</label>
+					        <div class="input-field col s12">
+					            <input id="contact" type="text" name="phone" class="validate" value="<?php echo htmlspecialchars($phone) ?>">
+					            <label for="contact">Contact number</label>
 								<div class="validation-error">
 									<?php
 										echo $errors['phoneErr'];
 									?>
 								</div>
-			        </div>
-		      	</div>
+					        </div>
+			      	    </div>
 
 						<div class="row">
-			        <div class="input-field col s12">
+					        <div class="input-field col s12">
 								<textarea id="textarea" name="message" class="materialize-textarea" data-length="400"><?php echo htmlspecialchars($message) ?></textarea>
-		          	<label for="textarea2">Message</label>
+				          	<label for="textarea2">Message</label>
 								<div class="validation-error">
 									<?php
 										echo $errors['messageErr'];
 									?>
 								</div>
-			        </div>
-			      </div>
+					        </div>
+				        </div>
 						<div class="row">
 							<div class="col s12 center">
 								<button class="btn waves-effect cyan waves-light z-depth-2" type="submit" value="Submit" name="submit">Submit
@@ -151,7 +151,7 @@
 							  </button>
 							</div>
 						</div>
-			    </form>
+			        </form>
 				</div>
 			</div>
 
@@ -161,8 +161,7 @@
 				}
 			?>
 
-			</div>
-	  </div>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/materialize.min.js"></script>

@@ -30,41 +30,41 @@
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<script
-				  src="https://code.jquery.com/jquery-3.4.1.min.js"
-				  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-				  crossorigin="anonymous"></script>
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
 </head>
 <body>
 
 	<div class="container">
-	  <div class="row">
+      	<div class="row">
 			<h3 class="col s12 center">Contact Information</h3>
 			<div class="col s12 card-panel">
-				<table class="responsive-table highlight">
-		        <thead>
-		          <tr>
-		              <th>First Name</th>
-		              <th>Last Name</th>
-		              <th>Email</th>
-									<th>Phone</th>
-									<th>Message</th>
-		          </tr>
-		        </thead>
+		  	<table class="responsive-table highlight">
+          		<thead>
+	          		<tr>
+              			<th>First Name</th>
+	            		<th>Last Name</th>
+	            		<th>Email</th>
+						<th>Phone</th>
+						<th>Message</th>
+	           		</tr>
+	          	</thead>
 
-		        <tbody>
-							<?php
-								foreach ($contactArray as $eachContactInfo) {
-									echo '<tr>';
-									foreach ($eachContactInfo as $key => $value) {
-										echo '<td>' . $value . '</td>';
-									}
-									echo '</tr>';
-								}
-							?>
+	         	<tbody>
+					<?php
+						foreach ($contactArray as $eachContactInfo) {
+							echo '<tr>';
+							foreach ($eachContactInfo as $key => $value) {
+								echo '<td>' . $value . '</td>';
+							}
+							echo '</tr>';
+						}
+					?>
 		        </tbody>
-		      </table>
-			  </div>
-	  </div>
+	        </table>
+	  		</div>
+	  	</div>
 	</div>
 
 	<script type="text/javascript" src="js/materialize.min.js"></script>
