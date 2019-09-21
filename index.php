@@ -10,57 +10,56 @@
 
   if(isset($_POST['submit'])) {
 
-  if(empty(trim($_POST['first_name']))) {
-  $errors['firstName']  = 'First Name is required.';
-  } else {
-  $firstName = $_POST['first_name'];
-  }
-  if(empty(trim($_POST['last_name']))) {
-  $errors['lastName'] = "Last Name is required.";
-  } else {
-  $lastName = $_POST['last_name'];
-  }
-  if(empty(trim($_POST['email']))) {
-  $errors['emailErr'] = "Email is required.";
-  } else {
-  $email = $_POST['email'];
-  }
-  if(empty(trim($_POST['phone']))) {
-  $errors['phoneErr'] = "Contact number is required";
-  } else {
-  if(!preg_match('/^\+?\d+$/', $_POST['phone'])){
-  $errors['phoneErr'] = "Contact number must contain only numbers.";
-  } else {
-  $phone = $_POST['phone'];
-  }
-  $phone = $_POST['phone'];
-  }
-  if(empty(trim($_POST['message']))) {
-  $errors['messageErr'] = "Message is required";
-  } else {
-  $message = $_POST['message'];
-  }
+    if(empty(trim($_POST['first_name']))) {
+      $errors['firstName']  = 'First Name is required.';
+    } else {
+      $firstName = $_POST['first_name'];
+    }
+    if(empty(trim($_POST['last_name']))) {
+      $errors['lastName'] = "Last Name is required.";
+    } else {
+      $lastName = $_POST['last_name'];
+    }
+    if(empty(trim($_POST['email']))) {
+      $errors['emailErr'] = "Email is required.";
+    } else {
+      $email = $_POST['email'];
+    }
+    if(empty(trim($_POST['phone']))) {
+      $errors['phoneErr'] = "Contact number is required";
+    } else {
+      if(!preg_match('/^\+?\d+$/', $_POST['phone'])){
+        $errors['phoneErr'] = "Contact number must contain only numbers.";
+      } else {
+        $phone = $_POST['phone'];
+      }
+    }
+    if(empty(trim($_POST['message']))) {
+      $errors['messageErr'] = "Message is required";
+    } else {
+      $message = $_POST['message'];
+    }
 
 
-  if(!empty(trim($firstName)) && !empty(trim($lastName)) && !empty(trim($email)) && !empty(trim($phone)) && !empty(trim($message))) {
-  $formValid = true;
-  }
+    if(!empty(trim($firstName)) && !empty(trim($lastName)) && !empty(trim($email)) && !empty(trim($phone)) && !empty(trim($message))) {
+      $formValid = true;
+    }
 
-  if($formValid){
-  $new_csv = fopen($filename, 'a');
-  $resOrder = array(
-  0 => htmlspecialchars($firstName),
-  1 => htmlspecialchars($lastName),
-  2 => htmlspecialchars($email),
-  3 => htmlspecialchars($phone),
-  4 => htmlspecialchars($message)
-  );
-  fputcsv($new_csv, $resOrder);
+    if($formValid){
+      $new_csv = fopen($filename, 'a');
+      $resOrder = array(
+      0 => htmlspecialchars($firstName),
+      1 => htmlspecialchars($lastName),
+      2 => htmlspecialchars($email),
+      3 => htmlspecialchars($phone),
+      4 => htmlspecialchars($message)
+      );
+      fputcsv($new_csv, $resOrder);
 
-  $sucessMessage = "Thank you for contact with us. We will get back to you asap.";
+      $sucessMessage = "Thank you for contact with us. We will get back to you asap.";
 
-  $firstName = $lastName = $email = $phone = $message = '';
-  }
+      $firstName = $lastName = $email = $phone = $message = '';
+    }
   }
 
 ?>
@@ -83,7 +82,7 @@
     if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
     }
-    </script>
+  </script>
 
 </head>
 <body>
