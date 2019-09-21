@@ -1,0 +1,22 @@
+.contact-form {
+  margin: 20px 15px;
+}
+
+.input-field input:focus + label , .input-field textarea:focus + label{
+  color: #26c6da !important;
+}
+/* label underline focus color */
+.input-field input:focus, .input-field textarea:focus {
+  border-bottom: 1px solid #26c6da!important;
+  box-shadow: 0 1px 0 0 #26c6da !important
+}
+
+.contact-form .row {
+  margin-bottom: 10px;
+}
+
+.validation-error {
+  color: #d50000;
+  margin: 0;
+  font-size: 13px;
+}
